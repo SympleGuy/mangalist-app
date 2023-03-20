@@ -1,13 +1,15 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Head from 'next/head';
 export default function Layout({ children }) {
   return (
-    <div>
+    <>
+      <Head>
+        <title>MangaList</title>
+      </Head>
       <Navbar />
-      <div>
-        <main>{children}</main>
-      </div>
+      <div className="container mx-auto">{children}</div>
       <Footer />
-    </div>
+    </>
   );
 }
